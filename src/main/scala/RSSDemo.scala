@@ -4,9 +4,9 @@ import org.apache.spark.streaming.twitter._
 object RSSDemo {
   def main(args: Array[String]) {
     // Configure Twitter credentials using twitter.txt
-    // setupTwitter()
+//    setupTwitter()
     val ssc = new StreamingContext("local[*]", "PrintTweets", Seconds(15))
-    // setupLogging()
+//    setupLogging()
 
     // Create a DStream from Twitter using our streaming context
     val tweets = TwitterUtils.createStream(ssc, None, Array("Space X"))
